@@ -1,0 +1,25 @@
+{
+  "name": "crash-course-laith-yt",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --watch \"./**/*.ts\" --exec \"ts-node\"  src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/express": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mssql": "^10.0.4",
+    "nodemon": "^3.1.7",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
