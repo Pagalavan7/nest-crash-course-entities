@@ -1,6 +1,8 @@
 import { DataSource } from "typeorm";
 import "dotenv/config";
 import { Client } from "./Entities/client";
+import { Transaction } from "./Entities/transaction";
+import { Bank } from "./Entities/banker";
 
 const dataSource = new DataSource({
   type: "mssql",
@@ -14,7 +16,7 @@ const dataSource = new DataSource({
     encrypt: true,
     trustServerCertificate: true,
   },
-  entities: [Client],
+  entities: [Client, Transaction, Bank],
   synchronize: true,
 });
 

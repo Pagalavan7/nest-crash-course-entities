@@ -2,7 +2,6 @@ import {
   BaseEntity,
   Column,
   Entity,
-  JoinColumn,
   ManyToOne,
   PrimaryGeneratedColumn,
 } from "typeorm";
@@ -18,10 +17,7 @@ export class Transaction extends BaseEntity {
   @PrimaryGeneratedColumn({})
   transactionId: number;
 
-  @Column({
-    type: "enum",
-    enum: TransactionType,
-  })
+  @Column()
   type: string;
 
   @Column({
@@ -30,8 +26,5 @@ export class Transaction extends BaseEntity {
   amount: number;
 
   @ManyToOne(() => Client, (client) => client.transactions)
-  @JoinColumn({
-    name: "clientId",
-  })
   client: Client;
 }
